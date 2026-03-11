@@ -1,0 +1,39 @@
+### JetBrains (IntelliJ IDEA) ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### Eclipse ###
+.metadata/
+bin/
+tmp/
+.tmp/
+.classpath
+.project
+.settings/
+
+### VS Code ###
+.vscode/
+
+### Build Tools (Maven/Gradle) ###
+target/
+build/
+.gradle/
+.m2/
+
+### Logs & Temp ###
+*.log
+logs/
+*.temp
+*.tmp
+
+### Spring Boot Specific ###
+# Ignore local environment properties (where you might store passwords)
+application-local.properties
+application-local.yml
+
+### OS Specific ###
+.DS_Store
+Thumbs.db
