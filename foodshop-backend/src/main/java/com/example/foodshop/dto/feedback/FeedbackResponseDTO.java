@@ -13,5 +13,7 @@ public class FeedbackResponseDTO {
     private String comment;
     private Long orderId;
     private Long userId;
+    private String userName;
+    private String userEmail;
     private Instant createdAt;
 }

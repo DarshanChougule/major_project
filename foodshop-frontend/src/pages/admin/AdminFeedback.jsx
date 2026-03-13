@@ -120,7 +120,10 @@ export default function AdminFeedback() {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                     <div>
                       <h3 className="font-semibold text-gray-900">{fb.userName || 'Anonymous'}</h3>
-                      <div className="text-xs text-gray-500">Order #{fb.orderId} · {formatDate(fb.createdAt)}</div>
+                      <div className="text-xs text-gray-500">
+                        {fb.userEmail && <span>{fb.userEmail} · </span>}
+                        Order #{fb.orderId} · {formatDate(fb.createdAt)}
+                      </div>
                     </div>
                     <StarDisplay rating={fb.rating} />
                   </div>

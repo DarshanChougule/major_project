@@ -61,6 +61,8 @@ public class FeedbackService {
                 .comment(saved.getComment())
                 .orderId(order.getId())
                 .userId(user.getId())
+                .userName(user.getName())
+                .userEmail(user.getEmail())
                 .createdAt(saved.getCreatedAt())
                 .build();
     }
@@ -93,6 +95,8 @@ public class FeedbackService {
                 .comment(feedback.getComment())
                 .orderId(feedback.getOrder().getId())
                 .userId(feedback.getUser().getId())
+                .userName(feedback.getUser().getName())
+                .userEmail(feedback.getUser().getEmail())
                 .createdAt(feedback.getCreatedAt())
                 .build();
     }

@@ -6,49 +6,53 @@ import {
   FiStar, FiTruck, FiHeart
 } from 'react-icons/fi'
 
+/* ─── Hero backgrounds: vibrant Indian vegetarian food shots ─── */
 const HERO_IMAGES = [
-  'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1920&q=80&auto=format&fit=crop', // Indian thali spread
-  'https://images.unsplash.com/photo-1574484284002-952d92456975?w=1920&q=80&auto=format&fit=crop', // Indian feast
-  'https://images.unsplash.com/photo-1606491956689-2ea866880049?w=1920&q=80&auto=format&fit=crop', // Dosa
+  'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1920&q=80&auto=format&fit=crop', // Colourful Indian thali with dal, sabzi, roti & rice
+  'https://images.unsplash.com/photo-1606491956689-2ea866880049?w=1920&q=80&auto=format&fit=crop', // Indian paneer & vegetable curry spread
+  'https://images.unsplash.com/photo-1567337710282-00832b415979?w=1920&q=80&auto=format&fit=crop', // Indian street food platter — chaat, samosa, pani puri
 ]
 
+/* ─── Browse-by-category tiles ─── */
 const FOOD_CATEGORIES = [
-  { name: 'Vada Pav',    emoji: '🌶️', color: 'from-red-400 to-orange-400' },
-  { name: 'Idli & Dosa', emoji: '🫓', color: 'from-yellow-400 to-amber-500' },
-  { name: 'Paneer',      emoji: '🧀', color: 'from-green-400 to-emerald-500' },
-  { name: 'Naan & Roti', emoji: '🍞', color: 'from-amber-400 to-orange-500' },
-  { name: 'Sabji',       emoji: '🍛', color: 'from-lime-400 to-green-500' },
-  { name: 'Sweets',      emoji: '🍮', color: 'from-purple-400 to-pink-500' },
+  { name: 'Paneer',   emoji: '🧀', color: 'from-amber-400 to-orange-500' },
+  { name: 'Dosa',     emoji: '🥞', color: 'from-yellow-400 to-amber-500' },
+  { name: 'Biryani',  emoji: '🍚', color: 'from-orange-400 to-red-400' },
+  { name: 'Chaat',    emoji: '🥘', color: 'from-green-400 to-emerald-500' },
+  { name: 'Roti',     emoji: '🫓', color: 'from-red-400 to-rose-500' },
+  { name: 'Mithai',   emoji: '🍬', color: 'from-pink-400 to-purple-500' },
 ]
 
+/* ─── Signature dishes: image URL ➜ verified description ─── */
 const SPECIALTIES = [
   {
-    title: 'Vada Pav',
-    desc: 'Mumbai\'s iconic street food — a spicy potato fritter nestled in a soft pav bun with chutneys. Simple, fiery, and unforgettable.',
-    img: 'https://images.unsplash.com/photo-1630383249896-424e482df921?w=600&q=80&auto=format&fit=crop',
-    origin: 'Mumbai, Maharashtra',
-  },
-  {
-    title: 'Idli & Medu Vada',
-    desc: 'Soft steamed rice cakes and crispy lentil fritters served with coconut chutney and sambar — a wholesome South Indian breakfast loved nationwide.',
-    img: 'https://images.unsplash.com/photo-1567337710282-00832b415979?w=600&q=80&auto=format&fit=crop',
-    origin: 'South India',
-  },
-  {
     title: 'Paneer Butter Masala',
-    desc: 'Cottage cheese cubes simmered in a rich, creamy tomato-butter gravy — the crown jewel of North Indian vegetarian cuisine.',
-    img: 'https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=600&q=80&auto=format&fit=crop',
-    origin: 'Punjab, North India',
+    desc: 'Soft paneer cubes simmered in a rich, creamy tomato-butter gravy with aromatic spices, finished with a swirl of cream and served with warm naan.',
+    img: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&q=80&auto=format&fit=crop', // Paneer butter masala curry
+    tag: 'Most Popular',
+  },
+  {
+    title: 'Masala Dosa',
+    desc: 'A crispy, golden rice-lentil crepe filled with spiced potato masala, served with coconut chutney and piping-hot sambar — a beloved South Indian classic.',
+    img: 'https://images.unsplash.com/photo-1668236543090-82eb5eace6fc?w=600&q=80&auto=format&fit=crop', // Masala dosa with chutney & sambar
+    tag: 'Customer Favourite',
+  },
+  {
+    title: 'Chole Bhature',
+    desc: 'Fluffy deep-fried bhature paired with spicy, tangy chickpea curry cooked with ginger, garlic, and a blend of North Indian spices — the ultimate comfort food.',
+    img: 'https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600&q=80&auto=format&fit=crop', // Chole bhature platter
+    tag: 'Street Food Hit',
   },
 ]
 
+/* ─── Feature cards ─── */
 const FEATURES = [
-  { icon: <FiClock />,       title: 'Fresh & Hot',         desc: 'Every dish is prepared fresh with traditional recipes and served piping hot at your doorstep.' },
-  { icon: <FiShield />,      title: '100% Pure Veg',       desc: 'We serve only vegetarian food, prepared with the freshest ingredients and zero compromises.' },
-  { icon: <FiSmartphone />,  title: 'Easy Ordering',       desc: 'Browse our desi menu and order your favourite Indian dishes in just a few taps.' },
-  { icon: <FiStar />,        title: 'Authentic Recipes',   desc: 'Time-honoured recipes passed down through generations — the real taste of India.' },
-  { icon: <FiTruck />,       title: 'Fast Delivery',       desc: 'Get your food delivered in 20-30 minutes, from our kitchen to your doorstep.' },
-  { icon: <FiHeart />,       title: 'Made with Love',      desc: 'Every dish is crafted with love, just like ghar ka khana — homemade goodness.' },
+  { icon: <FiClock />,       title: 'Fresh & Hot',       desc: 'Every dish is prepared to order and delivered piping hot so you always get the best taste.' },
+  { icon: <FiShield />,      title: 'Safe & Hygienic',   desc: 'We follow strict hygiene standards from kitchen to delivery for your peace of mind.' },
+  { icon: <FiSmartphone />,  title: 'Easy Ordering',     desc: 'Browse the full menu, customise your order, and checkout in just a few taps.' },
+  { icon: <FiStar />,        title: '100% Pure Veg',     desc: 'Every dish is 100% vegetarian, made with premium ingredients sourced daily — no compromises.' },
+  { icon: <FiTruck />,       title: 'Fast Delivery',     desc: 'Get your food delivered in 20–30 minutes, straight from our kitchen to your door.' },
+  { icon: <FiHeart />,       title: 'Made with Love',    desc: 'Every dish is crafted by passionate chefs who care about every last detail.' },
 ]
 
 export default function LandingPage() {
@@ -75,7 +79,7 @@ export default function LandingPage() {
           </div>
           <div className="flex items-center gap-3">
             {user ? (
-              <Link to={user.role === 'ADMIN' ? '/admin/manage-menu' : '/menu'} className="btn-primary !py-2 !px-5 text-sm flex items-center gap-2">
+              <Link to={user.role === 'ADMIN' ? '/admin/dashboard' : '/menu'} className="btn-primary !py-2 !px-5 text-sm flex items-center gap-2">
                 Go to Dashboard <FiArrowRight size={14} />
               </Link>
             ) : (
@@ -109,17 +113,17 @@ export default function LandingPage() {
           <div className="max-w-2xl animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 text-sm text-white/90 mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              🌿 100% Pure Vegetarian • Free delivery on first order
+              � Free delivery on your first order
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-              Authentic Indian
+              Pure Veg Indian,
               <br />
               <span className="bg-gradient-to-r from-brand-300 to-brand-500 bg-clip-text text-transparent">
-                Vegetarian Food
+                Delivered Fresh
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-lg leading-relaxed">
-              From the smoky streets of Mumbai's vada pav stalls to the aromatic kitchens of Punjab — savour India's finest vegetarian delicacies, delivered to your doorstep.
+              From creamy paneer butter masala and crispy dosas to flavourful biryanis and mouth-watering chaats — explore our pure veg menu and get your favourites delivered to your doorstep.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to={user ? '/menu' : '/register'} className="btn-primary !py-3.5 !px-8 text-base flex items-center justify-center gap-2 !rounded-2xl">
@@ -133,9 +137,9 @@ export default function LandingPage() {
             {/* Stats */}
             <div className="flex gap-8 mt-12">
               {[
-                { value: '500+', label: 'Happy Foodies' },
-                { value: '80+', label: 'Desi Dishes' },
-                { value: '4.9', label: 'Avg. Rating' },
+                { value: '500+', label: 'Happy Customers' },
+                { value: '120+', label: 'Menu Items' },
+                { value: '4.8', label: 'Avg. Rating' },
               ].map(s => (
                 <div key={s.label}>
                   <div className="text-2xl sm:text-3xl font-bold text-white">{s.value}</div>
@@ -158,8 +162,8 @@ export default function LandingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">What are you craving today?</h2>
-            <p className="text-gray-500 text-lg">Explore our rich variety of Indian vegetarian delights</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">What are you craving?</h2>
+            <p className="text-gray-500 text-lg">Explore our wide range of Indian veg delights</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 stagger-children">
             {FOOD_CATEGORIES.map(cat => (
@@ -183,7 +187,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Our Signature Dishes</h2>
-            <p className="text-gray-500 text-lg">Each dish tells a story of India's diverse culinary heritage</p>
+            <p className="text-gray-500 text-lg">Chef-crafted favourites loved by our customers</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
             {SPECIALTIES.map((s, i) => (
@@ -191,7 +195,7 @@ export default function LandingPage() {
                 <div className="relative h-56 overflow-hidden">
                   <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm text-xs font-semibold px-3 py-1 rounded-full text-brand-600">
-                    📍 {s.origin}
+                    ⭐ {s.tag}
                   </div>
                 </div>
                 <div className="p-6">
@@ -204,49 +208,46 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── Why Indian Food ── */}
+      {/* ── How It Works ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Why Indian Vegetarian Food is Special</h2>
-              <div className="space-y-5">
-                <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-green-100 text-green-600 flex items-center justify-center text-xl flex-shrink-0 mt-1">🌿</div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">World's Largest Vegetarian Cuisine</h4>
-                    <p className="text-gray-500 text-sm leading-relaxed">India has the richest vegetarian culinary tradition on the planet, with thousands of unique dishes from every region.</p>
-                  </div>
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">How It Works</h2>
+            <p className="text-gray-500 text-lg">Getting your food delivered is easier than ever</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              {
+                step: '01',
+                title: 'Browse the Menu',
+                desc: 'Explore a wide variety of Indian veg dishes — from paneer curries and dosas to biryanis and chaats. Filter by category and find exactly what you crave.',
+                emoji: '📋',
+                color: 'bg-brand-50 text-brand-600',
+              },
+              {
+                step: '02',
+                title: 'Place Your Order',
+                desc: 'Add items to your cart, customise quantities, add special instructions, and check out in seconds.',
+                emoji: '🛒',
+                color: 'bg-emerald-50 text-emerald-600',
+              },
+              {
+                step: '03',
+                title: 'Enjoy Your Meal',
+                desc: 'Sit back and relax. Your freshly prepared food will be at your doorstep in 20–30 minutes, hot and ready to eat.',
+                emoji: '🍽️',
+                color: 'bg-purple-50 text-purple-600',
+              },
+            ].map((item, i) => (
+              <div key={i} className="text-center group">
+                <div className={`w-20 h-20 ${item.color} rounded-3xl flex items-center justify-center text-4xl mx-auto mb-5 shadow-sm group-hover:scale-110 transition-transform duration-300`}>
+                  {item.emoji}
                 </div>
-                <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl flex-shrink-0 mt-1">🫚</div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">A Symphony of Spices</h4>
-                    <p className="text-gray-500 text-sm leading-relaxed">From turmeric, cumin, and coriander to cardamom and saffron — every dish is a masterful blend of aromatic spices with amazing health benefits.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl flex-shrink-0 mt-1">❤️</div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Rooted in Tradition</h4>
-                    <p className="text-gray-500 text-sm leading-relaxed">Recipes passed down through generations, reflecting centuries of culture, festivals, and the warmth of Indian hospitality.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl flex-shrink-0 mt-1">🌍</div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-1">Regional Diversity</h4>
-                    <p className="text-gray-500 text-sm leading-relaxed">From South Indian dosas to Punjabi chole bhature, from Gujarati dhokla to Rajasthani dal baati — every state brings a unique flavour.</p>
-                  </div>
-                </div>
+                <div className="text-xs font-bold text-brand-500 uppercase tracking-widest mb-2">Step {item.step}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-500 leading-relaxed text-sm max-w-xs mx-auto">{item.desc}</p>
               </div>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=400&q=80&auto=format&fit=crop" alt="Indian thali" className="rounded-2xl shadow-lg w-full h-48 object-cover" />
-              <img src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&q=80&auto=format&fit=crop" alt="Paneer tikka" className="rounded-2xl shadow-lg w-full h-48 object-cover mt-8" />
-              <img src="https://images.unsplash.com/photo-1606491956689-2ea866880049?w=400&q=80&auto=format&fit=crop" alt="Dosa" className="rounded-2xl shadow-lg w-full h-48 object-cover -mt-4" />
-              <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=400&q=80&auto=format&fit=crop" alt="Chole bhature" className="rounded-2xl shadow-lg w-full h-48 object-cover mt-4" />
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -279,9 +280,9 @@ export default function LandingPage() {
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">Craving Authentic Indian Food?</h2>
+          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">Craving Authentic Indian Veg?</h2>
           <p className="text-xl text-brand-100 mb-10 max-w-2xl mx-auto">
-            Join FoodShop today and experience the true taste of India — from piping hot vada pav to creamy paneer masala, all 100% vegetarian.
+            Join FoodShop today and enjoy pure vegetarian Indian food from our kitchen — paneer specials, dosas, biryanis, chaats, mithai, and much more, delivered to your door.
           </p>
           <Link to={user ? '/menu' : '/register'} className="inline-flex items-center gap-2 bg-white text-brand-600 font-bold py-4 px-10 rounded-2xl text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
             Get Started Free <FiArrowRight size={20} />
@@ -301,7 +302,7 @@ export default function LandingPage() {
                 <span className="text-xl font-bold">FoodShop</span>
               </div>
               <p className="text-gray-400 max-w-md leading-relaxed">
-                Serving authentic Indian vegetarian food — from street-side favourites to royal Mughlai delicacies. Pure veg, always fresh.
+                Delivering authentic pure veg Indian food from our kitchen straight to your door. Fast, reliable, and always fresh.
               </p>
             </div>
             <div>

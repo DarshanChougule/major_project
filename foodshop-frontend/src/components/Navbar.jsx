@@ -2,8 +2,8 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { useState, useEffect } from 'react'
 import {
-  FiMenu, FiX, FiShoppingCart, FiLogOut, FiUser,
-  FiGrid, FiPackage, FiMessageSquare
+  FiMenu, FiX, FiShoppingCart, FiLogOut, FiUser, FiUsers,
+  FiGrid, FiPackage, FiMessageSquare, FiHome
 } from 'react-icons/fi'
 
 export default function Navbar() {
@@ -66,7 +66,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to={user ? (user.role === 'ADMIN' ? '/admin/manage-menu' : '/menu') : '/'} className="flex items-center gap-2 group">
+          <Link to={user ? (user.role === 'ADMIN' ? '/admin/dashboard' : '/menu') : '/'} className="flex items-center gap-2 group">
             <div className="w-9 h-9 bg-gradient-to-br from-brand-400 to-brand-600 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
               <span className="text-white text-lg">🍽</span>
             </div>
@@ -86,8 +86,10 @@ export default function Navbar() {
               </>
             ) : user.role === 'ADMIN' ? (
               <>
+                {navLink('/admin/dashboard', 'Dashboard', <FiHome size={16} />)}
                 {navLink('/admin/manage-menu', 'Menu', <FiGrid size={16} />)}
                 {navLink('/admin/orders', 'Orders', <FiPackage size={16} />)}
+                {navLink('/admin/users', 'Users', <FiUsers size={16} />)}
                 {navLink('/admin/feedback', 'Feedback', <FiMessageSquare size={16} />)}
                 <div className="w-px h-6 bg-gray-200 mx-2" />
                 <button onClick={onLogout} className="flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium text-red-500 hover:bg-red-50 transition-all">
@@ -137,8 +139,10 @@ export default function Navbar() {
               </>
             ) : user.role === 'ADMIN' ? (
               <>
+                {navLink('/admin/dashboard', 'Dashboard', <FiHome size={16} />)}
                 {navLink('/admin/manage-menu', 'Manage Menu', <FiGrid size={16} />)}
                 {navLink('/admin/orders', 'Orders', <FiPackage size={16} />)}
+                {navLink('/admin/users', 'Users', <FiUsers size={16} />)}
                 {navLink('/admin/feedback', 'Feedback', <FiMessageSquare size={16} />)}
                 <button onClick={onLogout} className="w-full flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium text-red-500 hover:bg-red-50 transition-all">
                   <FiLogOut size={16} /> Logout

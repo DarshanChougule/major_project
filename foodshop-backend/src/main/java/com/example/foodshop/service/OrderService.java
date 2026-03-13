@@ -89,7 +89,7 @@ public class OrderService {
                         .build()
         ).toList();
 
-        // ✅ include description when mapping entity → response
+        // ✅ include description + user details when mapping entity → response
         return OrderResponse.builder()
                 .id(o.getId())
                 .status(o.getStatus().name())
@@ -97,7 +97,10 @@ public class OrderService {
                 .items(items)
                 .createdAt(o.getCreatedAt())
                 .updatedAt(o.getUpdatedAt())
-                .description(o.getDescription()) // <--- new line
+                .description(o.getDescription())
+                .userId(o.getUser().getId())
+                .userName(o.getUser().getName())
+                .userEmail(o.getUser().getEmail())
                 .build();
     }
 }

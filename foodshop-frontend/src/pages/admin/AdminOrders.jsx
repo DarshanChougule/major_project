@@ -142,7 +142,7 @@ export default function AdminOrders() {
             return (
               <div key={o.id} className="card overflow-hidden">
                 {/* Header */}
-                <div className="px-6 py-4 bg-gray-50/50 border-b border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="px-6 py-4 bg-gray-50/50 border-b border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-wrap">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center">
                       <FiPackage size={20} className="text-brand-500" />
@@ -152,6 +152,17 @@ export default function AdminOrders() {
                       <div className="text-xs text-gray-500 flex items-center gap-1">
                         <FiClock size={12} /> {formatDate(o.createdAt)}
                       </div>
+                    </div>
+                  </div>
+
+                  {/* User details */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-white text-sm font-bold shadow-sm">
+                      {o.userName ? o.userName.charAt(0).toUpperCase() : '?'}
+                    </div>
+                    <div className="text-right sm:text-left">
+                      <div className="text-sm font-semibold text-gray-800">{o.userName || 'Unknown'}</div>
+                      <div className="text-xs text-gray-500">{o.userEmail || ''}</div>
                     </div>
                   </div>
                   <span className={`badge ${conf.color} flex items-center gap-1.5`}>

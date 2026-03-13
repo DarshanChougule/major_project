@@ -23,7 +23,7 @@ export default function Login() {
       localStorage.setItem('role', role)
       localStorage.setItem('email', userEmail)
       login({ token, role, email: userEmail })
-      navigate(role === 'ADMIN' ? '/admin/manage-menu' : '/menu')
+      navigate(role === 'ADMIN' ? '/admin/dashboard' : '/menu')
     } catch (err) {
       setError(err?.response?.data?.message || 'Invalid email or password')
     } finally {

@@ -9,6 +9,8 @@ import MyOrders from './pages/MyOrders'
 import AdminManageMenu from './pages/admin/AdminManageMenu'
 import AdminOrders from './pages/admin/AdminOrders'
 import AdminFeedback from './pages/admin/AdminFeedback'
+import AdminUsers from './pages/admin/AdminUsers'
+import AdminDashboard from './pages/admin/AdminDashboard'
 import ProtectedRoute from './components/ProtectedRoute'
 import LandingPage from './components/LandingPage'
 
@@ -28,8 +30,10 @@ export default function App() {
         <Route path="/orders" element={<ProtectedRoute><MyOrders /></ProtectedRoute>} />
 
         {/* Admin */}
+        <Route path="/admin/dashboard" element={<ProtectedRoute role="ADMIN"><AdminDashboard /></ProtectedRoute>} />
         <Route path="/admin/manage-menu" element={<ProtectedRoute role="ADMIN"><AdminManageMenu /></ProtectedRoute>} />
         <Route path="/admin/orders" element={<ProtectedRoute role="ADMIN"><AdminOrders /></ProtectedRoute>} />
+        <Route path="/admin/users" element={<ProtectedRoute role="ADMIN"><AdminUsers /></ProtectedRoute>} />
         <Route path="/admin/feedback" element={<ProtectedRoute role="ADMIN"><AdminFeedback /></ProtectedRoute>} />
 
         {/* 404 */}

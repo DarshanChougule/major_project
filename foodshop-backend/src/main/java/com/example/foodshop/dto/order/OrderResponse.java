@@ -17,4 +17,9 @@ public class OrderResponse {
     private Instant updatedAt;
 
     private String description; // ✅ added for returning order notes
+
+    // User details
+    private Long userId;
+    private String userName;
+    private String userEmail;
 }
